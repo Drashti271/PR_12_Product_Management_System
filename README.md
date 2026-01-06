@@ -71,6 +71,12 @@ Live : https://pr-12-product-management-system.onrender.com
 Products
 <img width="1601" height="887" alt="image" src="https://github.com/user-attachments/assets/d5b50fb2-74bf-48d2-9289-7b3c903e075a" />
 
+Sale
+<img width="1614" height="379" alt="image" src="https://github.com/user-attachments/assets/d4fcdda3-38df-46f8-ba4a-eae27bfa7a08" />
+
+Purchase
+<img width="1613" height="375" alt="image" src="https://github.com/user-attachments/assets/567a8b29-36e5-4a8c-93a5-0220ba160a18" />
+
 ## 🚀 Features
 
 -   User Authentication (Passport.js)
