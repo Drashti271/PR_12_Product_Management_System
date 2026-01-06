@@ -68,6 +68,9 @@ Live : https://pr-12-product-management-system.onrender.com
     ├── package.json
     └── README.md
 
+Products
+<img width="1601" height="887" alt="image" src="https://github.com/user-attachments/assets/d5b50fb2-74bf-48d2-9289-7b3c903e075a" />
+
 ## 🚀 Features
 
 -   User Authentication (Passport.js)
