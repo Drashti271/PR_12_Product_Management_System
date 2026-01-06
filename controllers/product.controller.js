@@ -8,10 +8,7 @@ export const addProductPage = (req, res) => {
 
 export const addProduct = async (req, res) => {
     try {
-        if (req.file) {
-            req.body.image = req.file.filename;
-        }
-
+        req.body.image = req.file.path;
         const product = await ProductModel.create(req.body);
         console.log("Product Added:", product);
 

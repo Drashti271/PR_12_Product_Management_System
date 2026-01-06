@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
 
-app.use("/", router);
+app.use("/",router);
 
 app.listen(port, () => {
     console.log("Server started.");
