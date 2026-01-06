@@ -7,7 +7,7 @@ const saleSchema = new mongoose.Schema({
   },
   product: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "productModel",
+    ref: "productModel", 
     required: true
   },
   quantity: {

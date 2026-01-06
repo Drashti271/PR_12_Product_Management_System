@@ -50,6 +50,7 @@
                       <th scope="col">Date</th>
                       <th scope="col">Quantity</th>
                       <th scope="col">Salling Price</th>
+                      <th scope="col">Customer</th>
                       <th scope="col">Action</th>
                     </tr>
                   </thead>
@@ -57,14 +58,14 @@
                     <% sales.forEach((value, index) => { %>
                       <tr>
                         <td><%= index + 1 %></td>
-                        <td><%= value.product %></td>
-                        <td><%= value.date %></td>
+                        <td><%= value.product?.name %></td>
+                        <td><%= new Date(value.date).toLocaleString() %></td>
                         <td><%= value.quantity %></td>
-                        <td><%= value.sallingPrice %></td>
+                        <td><%= value.sellingPrice %></td>
                         <td><%= value.customer %></td>
                         <td>
-                          <a href="/deleteSale/<%= value.id %>" class="btn btn-danger btn-sm">Delete</a>
-                          <a href="/editSale/<%= value.id %>" class="btn btn-warning btn-sm">Edit</a>
+                          <a href="/inventory/deleteSale/<%= value._id %>" class="btn btn-danger btn-sm">Delete</a>
+                          <a href="/inventory/editSale/<%= value._id %>" class="btn btn-warning btn-sm">Edit</a>
                         </td>
                       </tr>
                     <% }) %>

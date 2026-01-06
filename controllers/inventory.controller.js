@@ -14,12 +14,14 @@ export const salePage = async (req, res) => {
 
 export const addPurchase = async (req, res) => {
   try {
-    const { product, quantity } = req.body;
+    const { product, quantity, supplier, purchasePrice } = req.body;
     const qty = Number(quantity);
 
     await Purchase.create({
       product,
-      quantity: qty
+      quantity: qty,
+      supplier,
+      purchasePrice
     });
 
     await ProductModel.findByIdAndUpdate(
@@ -27,7 +29,7 @@ export const addPurchase = async (req, res) => {
       { $inc: { stock: qty } }
     );
 
-    res.redirect("/purchase");
+    res.redirect("/inventory/purchase");
   } catch (error) {
     console.log(error);
     res.send("Purchase add nahi hua");
@@ -36,7 +38,7 @@ export const addPurchase = async (req, res) => {
 
 export const addSale = async (req, res) => {
   try {
-    const { product, quantity } = req.body;
+    const { product, quantity, sellingPrice, customer } = req.body;
     const qty = Number(quantity);
 
     const productData = await ProductModel.findById(product);
@@ -51,7 +53,9 @@ export const addSale = async (req, res) => {
 
     await Sale.create({
       product,
-      quantity: qty
+      quantity: qty,
+      sellingPrice,
+      customer
     });
 
     await ProductModel.findByIdAndUpdate(
@@ -59,7 +63,7 @@ export const addSale = async (req, res) => {
       { $inc: { stock: -qty } }
     );
 
-    res.redirect("/sale");
+    res.redirect("/inventory/sale");
   } catch (error) {
     console.log(error);
     res.send("Sale add nahi hui");
