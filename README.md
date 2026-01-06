@@ -6,8 +6,11 @@ A Node.js + Express based Product Management System using **MVC
 architecture**, **MongoDB**, **EJS**, and **Passport authentication**.
 
 Default Login/Signup Process :
+
 Email : drashti@gmail.com
 Password : 1234
+
+Live : https://pr-12-product-management-system.onrender.com
 
 ## 📁 Project Structure
 
